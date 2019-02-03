@@ -1,11 +1,11 @@
 const querystring = require('querystring');
 
-const data = () => {
+const namedExport = () => {
   const result = querystring.stringify({
-    magic: 'DEFAULT',
+    magic: 'NAMED',
   })
 
   return result;
 }
 
-module.exports = data;
+module.exports = { namedExport };

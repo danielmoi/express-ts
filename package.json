@@ -7,9 +7,10 @@
     "clean": "rm -rf dist",
     "build:tsc": "yarn clean && yarn tsc",
     "build:babel": "yarn clean && tsc --noEmit && babel -Dd dist src --extensions \".js,.ts,.tsx\"",
+    "build": "yarn build:babel",
     "build:watch": "watchexec -i \"dist/*\" -e js,ts -r yarn build:babel",
     "prestart": "yarn build",
-    "start": "node .",
+    "start": "node dist/index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
